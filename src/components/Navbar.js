@@ -3,11 +3,11 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
-
+import Logo from "./Pictures/blowhorn.png";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-
+  const [fix,setFix]=useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -26,21 +26,28 @@ function Navbar() {
       setDropdown(false);
     }
   };
-
+  function setFixed(){
+   if (window.scrollY>=6000 && window.scrollY<7200){
+    setFix(true)}
+    else{
+      setFix(false)
+    }
+   }
+  window.addEventListener("scroll",setFixed)
   return (
-    <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          EPIC
-          <i class='fab fa-firstdraft' />
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
+    <div>
+    <nav className={fix?'navbar2':"navbar"}>
+      <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
+        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <img src={Logo}></img>
+        </Link>
+        
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
+            <a href="#" id="style-2" data-replace="Home"><span>Home</span></a>
             </Link>
           </li>
           <li
@@ -48,12 +55,10 @@ function Navbar() {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <Link
-              to='/services'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Services <i className='fas fa-caret-down' />
+            <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
+              
+            <a href="#" id="style-2" data-replace="Our Solutions"><span>Our Solutions</span></a>
+              <i className='fas fa-caret-down' />
             </Link>
             {dropdown && <Dropdown />}
           </li>
@@ -62,8 +67,8 @@ function Navbar() {
               to='/products'
               className='nav-links'
               onClick={closeMobileMenu}
-            >
-              Products
+            ><a href="#" id="style-2" data-replace="Our Story"><span>Our Story</span></a>
+             
             </Link>
           </li>
           <li className='nav-item'>
@@ -72,7 +77,34 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Contact Us
+            <a href="#" id="style-2" data-replace="Become a Driver-Superhero"><span>Become a Driver-Superhero</span></a>
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='/contact-us'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+           <a href="#" id="style-2" data-replace="Resources"><span>Resources</span></a>
+             </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='/contact-us'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+            <a href="#" id="style-2" data-replace="Integrations"><span>Integrations</span></a>
+            </Link>
+          </li>
+                <li className='nav-item'>
+            <Link
+              to='/contact-us'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+            <a href="#" id="style-2" data-replace="Track"><span>Track</span></a>
             </Link>
           </li>
           <li>
@@ -87,7 +119,7 @@ function Navbar() {
         </ul>
         <Button />
       </nav>
-    </>
+    </div>
   );
 }
 

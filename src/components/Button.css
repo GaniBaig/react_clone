@@ -1,24 +1,47 @@
 :root {
-  --primary: #1888ff;
+  --primary: rgb(0, 210, 246);
 }
-
-.btn {
-  padding: 8px 20px;
-  border-radius: 4px;
-  outline: none;
+.clsbtn{
+  display: grid;
+  grid-template-columns:1fr 2fr;
+  width: 20%;
+  grid-gap: 20%;
+  text-decoration: none;
+}
+.btn1{
+  justify-content: space-around;
+  font-size: 20px;
   border: none;
-  font-size: 18px;
-  color: #fff;
-  cursor: pointer;
-  background-color: var(--primary);
+  padding: 5% 5%;
+  border-radius: 30px;
+  background-color: gainsboro;
+  transition-duration: 0.4s;
+  margin-right:2%;
+  width:160%;
+  height: 120%;
+  text-decoration: none;
+}
+.btn {
+  justify-content: space-around;
+  font-size: 20px;
+  border: none;
+  padding: 1% 1.5%;
+  border-radius: 30px;
+  background-color: rgb(0,210,246);
+  color: white;
+  transition-duration: 0.4s;
+  width:110%;
+  height: 140%;
+  text-decoration:none
+
+}
+.btn1:hover{
+  background-color: #6a726a;
+  color: white;
 }
 
 .btn:hover {
-  padding: 6px 18px;
-  transition: all 0.3s ease-out;
-  background-color: transparent;
-  color: #fff;
-  border-radius: 4px;
-  border: 2px solid var(--primary);
+  
+  box-shadow: 4px 2px 4px rgb(131, 129, 129);
   transition: all 0.3s ease-out;
 }

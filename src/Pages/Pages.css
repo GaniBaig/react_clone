@@ -1,0 +1,11 @@
+.float2{
+    display:none;
+}
+@media screen and (max-width: 800px) {
+.float1{
+    display: none;
+}
+.float2{
+    display:block;
+}
+}

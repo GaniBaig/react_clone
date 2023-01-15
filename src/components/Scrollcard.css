@@ -1,0 +1,171 @@
+.h1tag-fixed{
+    position: fixed;
+    top:20px;
+}
+
+#flex-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    }
+    .flex-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10%;
+        }
+    .progressbar-text{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        position: fixed;
+        top:105px;
+        width:100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: rgb(78, 78, 79);;
+    }
+    .video-containerno{
+        position: relative;
+    }
+    .progressbar-text-no{
+        display: none;
+    }
+
+
+    .progressbar-text{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        position: fixed;
+        top:105px;
+        width:100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: rgb(78, 78, 79);}
+        .notxt{
+            font-size: medium;
+                font-weight: 600;
+                width:70%;
+            color:white ;
+        }
+        .txt{
+            font-size: medium;
+            font-weight: 600;
+            width:70%;
+            color: rgb(78, 78, 78);
+        }
+    .video-no1{
+        display: none;
+    }
+    .video-no2{
+        display: none;
+    }
+    .video-no3{
+        display: none;
+    }
+    .video-no4{
+        display: none;
+    }
+    .video-no5{
+        display: none;
+    }
+    .no-video-container{
+        display:none
+        }
+        .video-container2{
+            padding: 5%;
+            width: 550px;
+            height:275px;
+            padding-top:10%;
+            overflow: hidden;
+            }
+    .video-container{
+    padding: 5%;
+    width: 600px;
+    height:315px;
+    position:fixed;
+    left:-1px;
+    top:240px;
+    overflow: hidden;
+    }
+    .flex-content{
+   
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5px;
+    }
+    #flex-inner1,#flex-inner2,#flex-inner3,#flex-inner4{
+        padding-left: 50%;
+    margin-top :20%;
+    margin-bottom: 20%;
+    margin-left: 5%;
+    }
+    .flexh1{
+    font-size:large;
+    font-weight: 650;
+    padding-bottom: 3%;
+    }
+    .flexp-small{
+    font-size: medium;
+    font-weight: 400;
+    color: rgb(92, 92, 92);
+    padding-bottom: 2%;
+    }
+    .flex-ul{
+     padding-bottom: 3%;
+     list-style-type: none;
+    }
+    .flex-li{
+        font-size: medium;
+        font-weight: 700;
+        color: rgb(92, 92, 92);
+        padding: 1.5%;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start ;
+        align-items: center;
+    }
+.bullet-class{
+    size: 70%;
+    margin-right: 2%;
+}
+    #progressBarContainer {
+        position: fixed;
+        background:  rgb(218, 243, 253);
+        border:solid 1px rgb(0, 210, 246);
+        width: 100%;
+        top: 81px;
+        left: 0;
+        justify-content: baseline;
+        align-items: flex-end;
+    }
+      
+    #progressBarContainer-no{
+        display: none;
+    }
+      
+    #progressBar {
+        background: linear-gradient(to left,rgb(0, 210, 246),rgb(0, 210, 246));
+        width: 90%;
+        transform-origin: top left;
+        transform: scale(0,0);
+        opacity: 0;
+    }
+    
+    #progressBarContainer,
+    #progressBar {
+        height: 85px;
+        color: aliceblue;
+    }
+    .h1tag{
+        position:fixed;
+    }
+    @media screen and (max-width: 990px) {
+        .Main-progress{
+            display :none;
+        }
+    }
