@@ -1,4 +1,5 @@
-{ "homepage": "https:///GaniBaig.github.io/react_clone",
+{ 
+  "homepage": "https:///GaniBaig.github.io/react_clone",
   "name": "react-clone",
   "version": "0.1.0",
   "private": true,
